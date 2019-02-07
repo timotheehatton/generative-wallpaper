@@ -48,10 +48,12 @@
 /* Intro */
 
 .intro {
+  text-align: center;
   background-color: #000000;
   padding-top: 225px;
   padding-bottom: 225px;
-  text-align: center;
+  width: 100%;
+  position: relative;
 }
 
 .intro__title {
@@ -68,7 +70,6 @@
 
 .intro__image {
   margin-top: 145px;
-  width: 100%;
   max-width: 1137px;
 }
 
@@ -80,4 +81,26 @@
   letter-spacing: -0.4px;
   text-align: center;
   line-height: 1.5;
+}
+
+/* generate */
+
+
+
+/* showcase */
+
+.showcase {
+  padding-top: 215px;
+  padding-bottom: 235px;
+  background-color: #000000;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.showcase__image1 {
+}
+
+.showcase__image2 {
+  margin-top: 252px;
 }
