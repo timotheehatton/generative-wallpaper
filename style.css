@@ -104,3 +104,32 @@
 .showcase__image2 {
   margin-top: 252px;
 }
+
+/* footer */
+
+.footer {
+  background: #181818;
+  height: 101px;
+  width: 100%;
+}
+
+.footer__copyright {
+  opacity: 0.56;
+  font-family: SFProDisplay-Semibold;
+  font-size: 18px;
+  color: #FFFFFF;
+  letter-spacing: -0.22px;
+  line-height: 101px;
+  float: left;
+}
+
+.footer__contact {
+  opacity: 0.56;
+  font-family: SFProDisplay-Semibold;
+  font-size: 18px;
+  color: #FFFFFF;
+  letter-spacing: -0.22px;
+  line-height: 101px;
+  float: right;
+  text-decoration: none;
+}
