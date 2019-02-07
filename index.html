@@ -38,16 +38,26 @@
     </div>
   </section>
   <section class="generate">
-    <!-- <a href="my-file-name.png" class="button" id="btn-download" download="my-file-name.png"></a> -->
-    <button style="display: none"></button>
-
-    <div class="finalRender__container" style="position: absolute; top: 0; left: 0; z-index: 100; background:white; display: flex; align-items: center; justify-content: center;">
-        <img src="" alt="" class="finalRender" style="width: 100%; height: auto;">
-    </div>
-
-    <div class="form">
-        <input class="form__input" type="text" placeholder="enter your imei..">
-        <button class="form__button">Create my background</button>
+    <div class="container">
+      <div class="generate__container">
+        <div class="generate__form">
+            <label for="inputGenerate" class="generate__form__label">Entrer votre numéro de série</label>
+            <div class="input__groupe">
+                <input id="inputGenerate" class="generate__form__input form__input" placeholder="012345678901234" type="text" placeholder="Enter your serial number">
+                <button id="buttonGenerate" class="generate__form__button form__button">Generer</button>
+            </div>
+            <label for="downloadGenerate" class="generate__form__label">Télécharger votre fond d'écran</label>
+            <a id="downloadGenerate" href="#" class="generate_download">Télécharger</a>
+        </div>
+        <div class="generate__render">
+            <!-- <a href="my-file-name.png" class="button" id="btn-download" download="my-file-name.png"></a> -->
+            <!-- <button style="display: none"></button> -->
+            <div class="finalRender__container">
+                <img src="" alt="" class="finalRender">
+                <img src="./img/iphone-mockup.png" alt="" class="finalRender__mockup">
+            </div>
+        </div>
+      </div>
     </div>
   </section>
   <section class="showcase">
