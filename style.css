@@ -237,3 +237,19 @@
   float: right;
   text-decoration: none;
 }
+
+#sketch-holder {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  width: calc(100% - 40px);
+  overflow: hidden;
+  height: calc(100% - 35px);
+  border-radius: 67px;
+}
+
+.hide {
+  opacity: 0;
+  transition: all ease 0.4s;
+}

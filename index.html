@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./style.css">
   <script src="lib/p5.min.js"></script>
-  <script src="lib/download.js"></script>
+  <!-- <script src="lib/download.js"></script> -->
   <script language="javascript" type="text/javascript" src="agent.js"></script>
   <script language="javascript" type="text/javascript" src="field-perlin.js"></script>
   <script language="javascript" type="text/javascript" src="lib/dat.gui.min.js"></script>
@@ -29,10 +29,10 @@
       <div class="intro__title">Votre propre univers à porter de main.</div>
       <img src="./img/iphone-center-mockup.png" alt="" class="intro__image">
       <div class="intro__content">
-        Créer votre propre fond d’écran unique grace a notre outils génératif. 
-        Unique a chaque iPhone. raesent efficitur pharetra sapien, non rhoncus velit 
+        Créer votre propre fond d’écran unique grace a notre outils génératif.
+        Unique a chaque iPhone. raesent efficitur pharetra sapien, non rhoncus velit
         mollis sed. Duis vitae risus dui. Crascondimentum consectetur nisi ac accumsan.
-        raesent efficitur pharetra sapien, non rhoncus velit mollis sed. Duis vitae risus dui. 
+        raesent efficitur pharetra sapien, non rhoncus velit mollis sed. Duis vitae risus dui.
         Cras condimentum consectetur nisi ac accumsan.
       </div>
     </div>
@@ -46,14 +46,15 @@
                 <input id="inputGenerate" class="generate__form__input form__input" placeholder="012345678901234" type="text" placeholder="Enter your serial number">
                 <button id="buttonGenerate" class="generate__form__button form__button">Generer</button>
             </div>
-            <label for="downloadGenerate" class="generate__form__label">Télécharger votre fond d'écran</label>
-            <a id="downloadGenerate" href="#" class="generate_download">Télécharger</a>
+            <label for="downloadGenerate" class="generate__form__label generate__form__label-dl hide">Télécharger votre fond d'écran</label>
+            <a id="downloadGenerate" href="#" class="generate_download hide" download filename="background">Télécharger</a>
         </div>
         <div class="generate__render">
             <!-- <a href="my-file-name.png" class="button" id="btn-download" download="my-file-name.png"></a> -->
             <!-- <button style="display: none"></button> -->
             <div class="finalRender__container">
                 <img src="" alt="" class="finalRender">
+                <div id="sketch-holder"></div>
                 <img src="./img/iphone-mockup.png" alt="" class="finalRender__mockup">
             </div>
         </div>

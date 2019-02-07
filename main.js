@@ -471,6 +471,8 @@ let imei = ''
 
 let seed;
 
+let oneRender = false;
+
 let colorSet = colorArray[3]
 let indexColorChange = 0;
 let indexColorStep = 0;
@@ -521,7 +523,8 @@ function launchSketch() {
 
     p.setup = function() {
 
-      p.createCanvas(375, 812);
+      var canvasEl = p.createCanvas(375, 812);
+      canvasEl.parent('sketch-holder');
 
       p.randomSeed(seed);
 
@@ -592,7 +595,10 @@ function launchSketch() {
               p.line(a.previousPosition.x, a.previousPosition.y, a.position.x, a.position.y);
           });
       } else {
+        if(oneRender === false) {
+          oneRender = true
           download()
+        }
       }
     }
 
@@ -600,16 +606,32 @@ function launchSketch() {
       background(255);
     }
 
+    function dataURLtoBlob(dataurl) {
+      var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
+          bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
+      while(n--){
+          u8arr[n] = bstr.charCodeAt(n);
+      }
+      return new Blob([u8arr], {type:mime});
+  }
+
     function download() {
 
-      var image = document.querySelector('.finalRender');
+      var button = document.querySelector('.generate_download');
+      var labelEl = document.querySelector('.generate__form__label-dl');
+
       var canvas = document.querySelector('canvas');
 
+      button.classList.remove('hide')
+      labelEl.classList.remove('hide')
+
       var dataURL = canvas.toDataURL('image/png');
-      image.src = dataURL;
-      canvas.style.display = "none !important"
+      var blob = dataURLtoBlob(dataURL);
+
+      button.href = URL.createObjectURL(blob);blob;
 
     }
+
   }
 
   var myp5 = new p5(sketch)
