@@ -1,0 +1,83 @@
+/* general */
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+/* header */
+
+.header {
+  position: relative;
+  background: #181818;
+  height: 71px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+}
+.header__logo {
+  font-family: SFProDisplay-Medium;
+  font-size: 18px;
+  color: #FFFFFF;
+  height: 100%;
+  line-height: 71px;
+  margin-left: 120px;
+}
+.header__nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.header__nav__item {
+  font-family: SFProDisplay-Medium;
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-left: 90px;
+  text-decoration: none;
+}
+
+/* Intro */
+
+.intro {
+  background-color: #000000;
+  padding-top: 225px;
+  padding-bottom: 225px;
+  text-align: center;
+}
+
+.intro__title {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: SFProDisplay-Semibold;
+  font-size: 80px;
+  color: #FFFFFF;
+  letter-spacing: -1px;
+  text-align: center;
+  line-height: 84px;
+}
+
+.intro__image {
+  margin-top: 145px;
+  width: 100%;
+  max-width: 1137px;
+}
+
+.intro__content {
+  margin-top: 200px;
+  font-family: SFProDisplay-Semibold;
+  font-size: 32px;
+  color: #FFFFFF;
+  letter-spacing: -0.4px;
+  text-align: center;
+  line-height: 1.5;
+}
