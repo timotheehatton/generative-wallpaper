@@ -66,11 +66,20 @@
   letter-spacing: -1px;
   text-align: center;
   line-height: 84px;
+  transform: translateY(40px);
+  opacity: 0;
+  transition: transform ease 1.2s, opacity ease 1.3s;
+  will-change: transform, opacity;
 }
 
 .intro__image {
   margin-top: 145px;
   max-width: 1137px;
+  transform: translateY(40px);
+  opacity: 0;
+  transition: transform ease 1.2s, opacity ease 1.3s;
+  will-change: transform, opacity;
+  transition-delay: 0.2s
 }
 
 .intro__content {
@@ -252,4 +261,35 @@
 .hide {
   opacity: 0;
   transition: all ease 0.4s;
+}
+
+body.active .intro__title {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: transform ease 1.2s, opacity ease 1.3s;
+  will-change: transform, opacity;
+}
+
+body.active .intro__image {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: transform ease 1.2s, opacity ease 1.3s;
+  will-change: transform, opacity;
+  transition-delay: 0.2s;
+}
+
+.to-animate {
+  transform: translateY(40px);
+  opacity: 0;
+  transition: transform ease 1.2s, opacity ease 1.3s;
+  will-change: transform, opacity;
+  transition-delay: 0.2s;
+}
+
+.to-animate.active {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: transform ease 1.2s, opacity ease 1.3s;
+  will-change: transform, opacity;
+  transition-delay: 0.2s;
 }

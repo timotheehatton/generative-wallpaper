@@ -637,4 +637,40 @@ function launchSketch() {
   var myp5 = new p5(sketch)
 }
 
+function pageAnimation() {
+  let body = document.querySelector('body')
+  setTimeout(() => {
+    body.classList.add('active')
+  }, 10);
+
+  window.addEventListener('scroll', (e) => {
+    let toAnime = document.querySelectorAll('.to-animate')
+
+    toAnime.forEach(element => {
+      if(window.scrollY >= getCoords(element).top - window.innerHeight / 1.5) {
+        element.classList.add('active')
+      }
+    });
+  })
+}
+
+function getCoords(elem) { // crossbrowser version
+  var box = elem.getBoundingClientRect();
+
+  var body = document.body;
+  var docEl = document.documentElement;
+
+  var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+  var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+
+  var clientTop = docEl.clientTop || body.clientTop || 0;
+  var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+
+  var top  = box.top +  scrollTop - clientTop;
+  var left = box.left + scrollLeft - clientLeft;
+
+  return { top: Math.round(top), left: Math.round(left) };
+}
+
 getFieldImei()
+pageAnimation()
